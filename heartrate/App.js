@@ -4,7 +4,7 @@ import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
   const [age, setAge] = useState('')
-  const [lowerHr, setLowerHr] = useState(0)
+  const [lowerHr, setLowerHr] = useState(60)
   const [higherHr, setHigherHr] = useState(220)
 
   const calculate = () => {
