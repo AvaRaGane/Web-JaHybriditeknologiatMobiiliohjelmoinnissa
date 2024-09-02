@@ -27,6 +27,6 @@ const styles = StyleSheet.create({
   fields: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 30,
+    padding: 40,
   }
 });
