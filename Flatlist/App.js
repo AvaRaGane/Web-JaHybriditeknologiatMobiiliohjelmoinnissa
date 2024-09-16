@@ -7,15 +7,18 @@ export default function App() {
     {id: "2", name: "bread"}
   ]
 
-  const renderItem = ({item}) => {
-    return (<Text>{item.name}</Text>)
-  }
+//  const renderItem = ({item}) => {
+//    return (<Text>{item.name}</Text>)
+//  }
   
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
       data={data}
-      renderItem={renderItem}
+//      renderItem={renderItem}
+      renderItem={({item}) => (
+        <Text>{item.name}</Text>
+      )}
       />
     </SafeAreaView>
 
