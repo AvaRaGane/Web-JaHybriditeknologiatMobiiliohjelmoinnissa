@@ -7,6 +7,7 @@ import uuid from 'react-native-uuid';
 
 export default function App() {
   const [data, setData] = useState([]) //add versiossa 
+  const [selectedId, setSelectedId] = useState(null)
 
   const add = useCallback((name) => {
     const newItem = {
