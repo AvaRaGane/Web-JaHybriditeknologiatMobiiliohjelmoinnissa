@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import Row from './components/Row';
 
 export default function App() {
   const data = [
@@ -15,10 +16,12 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <FlatList
       data={data}
-//      renderItem={renderItem}
-      renderItem={({item}) => (
-        <Text>{item.name}</Text>
-      )}
+//      renderItem={renderItem} //funktiolla
+        renderItem={({item}) => ( //ilman funktiota
+//        <Text>{item.name}</Text> //ilman funktiota
+          <Row item={item}/> //komponentilla
+        )}
+
       />
     </SafeAreaView>
 
