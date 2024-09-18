@@ -21,7 +21,7 @@ export default function Add({add}) {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         marginBottom: 16
     },
 });

@@ -25,7 +25,7 @@ export default function Row({item, selectedId, select,data,setData}) {
 const styles = StyleSheet.create({
     row: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center'
     },
     rowText: {
