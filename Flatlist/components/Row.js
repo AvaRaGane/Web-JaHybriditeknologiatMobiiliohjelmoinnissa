@@ -5,12 +5,9 @@ export default function Row({item, selectedId, select}) {
     const backgroundColor = item.id === selectedId ? '#f0f0f0' : '#fff'
 
     return (
-        <Pressable style={[styles.row,,{backgroundColor}]} onPress={() => select(item.id)}>
-            <Text style={styles.rowText}>{item.name}</Text>
-            {
-                item.id === selectedId && <Ionicons name='trash' size={24} />
-            }
-            </Pressable>
+        <Pressable onPress={() => select(item.id)}>
+            <Text style={[styles.row, {backgroundColor}]}>{item.name}</Text>
+        </Pressable>
     )
 }
 
