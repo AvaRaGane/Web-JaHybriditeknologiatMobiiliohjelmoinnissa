@@ -7,6 +7,7 @@ import uuid from 'react-native-uuid';
 
 export default function App() {
   const [data, setData] = useState([]) //add versiossa 
+  const [selectedId, setSelectedId] = useState(null)
 
   const add = useCallback((name) => {
     const newItem = {
@@ -17,21 +18,26 @@ export default function App() {
     setData(tempData)
   }, [data])
 
+  const select = (id) => {
+    setSelectedId(id);
+  };
 
-/*  const data = [  //ilman lisäämistä kovakoodattuna
-    {id: "1", name: "milk"},
-    {id: "2", name: "bread"}
-   ]*/
     return (
       <SafeAreaView style={styles.container}>
+        <Text style={styles.header}>Shopping list</Text>
         <Add add={add} />
         <FlatList
         data={data}
-  //      renderItem={renderItem} //funktiolla
-          renderItem={({item}) => ( //ilman funktiota
-  //        <Text>{item.name}</Text> //ilman funktiota
-            <Row item={item}/> //komponentilla
-          )}
+        keyExtractor={(item) => item.id}
+        extraData={selectedId}
+        renderItem={({item}) => ( 
+          <Row item={item}
+          selectedId={selectedId}
+          select={select}
+          data={data}
+          setData={setData}
+          /> 
+        )}
         />
       </SafeAreaView>
     );
