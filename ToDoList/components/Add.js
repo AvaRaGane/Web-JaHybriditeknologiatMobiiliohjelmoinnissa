@@ -6,6 +6,7 @@ export default function Add({add}) {
 
     const save = () => {
         add(name)
+
         setName('')
     }
 
