@@ -4,11 +4,11 @@ import MapView, { Marker } from 'react-native-maps'
 
 
 export default function Map({location,mapType}) {
-  const [marker, setMarker] = useState(null)
+  const [markers, setMarkers] = useState([])
 
   const showMarker = (e) => {
     const coords = e.nativeEvent.coordinate
-    setMarker(coords)
+    setMarkers([...markers,coords])
   }
 
   return (
@@ -20,11 +20,13 @@ export default function Map({location,mapType}) {
         onLongPress={showMarker}
       >
         {
-          marker && 
-            <Marker 
-              title="My marker"
-              coordinate={{latitude: marker.latitude,longitude: marker.longitude}}
+          markers.map((marker, index) =>(
+            <Marker
+            key={index}
+            title={`Marker ${index + 1}`}
+            coordinate={{latitude: marker.latitude,longitude: marker.longitude}}
             />
+          ))
         }
       </MapView>
     </SafeAreaView>
