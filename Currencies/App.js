@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { ActivityIndicator, StyleSheet, Text, TextInput, View } from 'react-native';
 import CurrencySelector from './components/CurrencySelector';
 
-const API_KEY = '7bbf59cd61efc266e6bc2010'
+const API_KEY = ''
 const BASE_URL = 'https://v6.exchangerate-api.com/v6/' + API_KEY + '/latest/EUR'
 
 export default function App() {
