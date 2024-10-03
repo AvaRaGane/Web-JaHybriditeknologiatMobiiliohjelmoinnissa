@@ -39,8 +39,8 @@ export default function App() {
     ]
   }
   
-
-  if (isLoading) return <View style={styles.container}><ActivityIndicator size="large"/></View>
+  if (API_KEY==='') return <View style={styles.container}><Text>API_KEY missing</Text></View>
+  else if (isLoading) return <View style={styles.container}><ActivityIndicator size="large"/></View>
   else if (error) return <View style={styles.container}><Text>{error.message}</Text></View>
   else{
     return (
