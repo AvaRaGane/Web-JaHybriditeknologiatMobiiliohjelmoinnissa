@@ -17,14 +17,11 @@ export default function App() {
 
   useEffect(() => {
     const address = BASE_URL
-    console.log(address)
     fetch(address)
       .then(response => response.json())
       .then((result) =>{
-        console.log(result.conversion_rates.GBP)
         const json = result.conversion_rates
         setRates(jsonToRatesArray(json))
-        console.log(json.GBP)
         setRate(json.GBP)
       }).catch ((error) => {
         setError(error)
