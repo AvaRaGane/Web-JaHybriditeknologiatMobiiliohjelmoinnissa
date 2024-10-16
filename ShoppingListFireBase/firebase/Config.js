@@ -4,11 +4,11 @@ import { getAuth, signInWithEmailAndPassword} from 'firebase/auth'
 
 const firebaseConfig = {
     apiKey: "",
-    authDomain: "chat-5d560.firebaseapp.com",
-    projectId: "chat-5d560",
-    storageBucket: "chat-5d560.appspot.com",
-    messagingSenderId: "771136514775",
-    appId: "1:771136514775:web:7c58586f45cb55cf2fde92"
+    authDomain: "shoppinglist-78eec.firebaseapp.com",
+    projectId: "shoppinglist-78eec",
+    storageBucket: "shoppinglist-78eec.appspot.com",
+    messagingSenderId: "1091634936158",
+    appId: "1:1091634936158:web:f71a55c09d3515e12eb7cf"
 };
 
 initializeApp(firebaseConfig);
