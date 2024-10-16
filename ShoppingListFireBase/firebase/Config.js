@@ -1,5 +1,5 @@
 import {initializeApp} from 'firebase/app'
-import { getFirestore, collection,addDoc, query, serverTimestamp, onSnapshot, orderBy } from 'firebase/firestore';
+import { getFirestore, collection, addDoc, query, serverTimestamp, onSnapshot, orderBy, doc, deleteDoc } from 'firebase/firestore';
 import { getAuth, signInWithEmailAndPassword} from 'firebase/auth'
 
 const firebaseConfig = {
@@ -26,5 +26,7 @@ export {
     MESSAGES,
     serverTimestamp,
     getAuth,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    doc,
+    deleteDoc
 };
