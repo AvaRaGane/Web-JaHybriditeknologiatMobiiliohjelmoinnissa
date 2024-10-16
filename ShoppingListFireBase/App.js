@@ -60,7 +60,7 @@ export default function App() {
       </ScrollView>
       <View style={styles.form}>
         <TextInput
-          placeholder='Send message...'
+          placeholder='Add item to shopping list...'
           value={newMessage}
           onChangeText={text => setNewMessage(text)}
           multiline={true}
